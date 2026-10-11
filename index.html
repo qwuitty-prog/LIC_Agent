@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d2b4e">
 <title>Sanjay Kumar Singh | IRDAI Licensed LIC Agent</title>
 <meta name="description" content="Sanjay Kumar Singh, IRDAI licensed LIC agent with 30+ years of experience. Health, term life, LIC, group health and travel insurance.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,10 +12,12 @@
 <style>
 :root{--navy:#0d2b4e;--blue:#1a4a80;--accent:#b8862b;--gold:#e3b55c;--bg:#fff;--alt:#f4f6f9;--ink:#1c2a3a;--mute:#566475;--line:#dfe5ec}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%}
 body{font-family:"Source Sans 3",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px}
 h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;color:var(--navy);line-height:1.2}
-a{color:inherit}
+a{color:inherit;-webkit-tap-highlight-color:transparent}
+h1,h2{text-wrap:balance}
+body{overflow-x:hidden}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .wrap{max-width:1400px;margin:0 auto;padding:0 clamp(18px,4vw,56px)}
 .top{background:var(--navy);color:#cbd6e3;font-size:.88rem}
@@ -118,7 +121,6 @@ footer b{color:#fff}
   section{padding:48px 0}
   .hero h1{font-size:clamp(1.85rem,7.2vw,2.4rem)}
   .lead{font-size:1.02rem}
-  .heads{min-height:250px}
 }
 @media(max-width:600px){
   body{font-size:16px}
@@ -128,7 +130,7 @@ footer b{color:#fff}
   .brand span{font-size:.82rem}
   .hero .wrap{padding-top:36px;padding-bottom:40px}
   .tag{font-size:.82rem;padding:5px 11px}
-  .heads{min-height:270px;margin-top:18px}
+  .heads{margin-top:18px}
   .btns{flex-direction:column;margin-top:22px}
   .btns .btn{text-align:center;width:100%}
   .dots{margin-top:22px}
@@ -156,6 +158,52 @@ footer b{color:#fff}
 @keyframes wawig{0%,70%,100%{transform:rotate(0)}76%{transform:rotate(-14deg)}82%{transform:rotate(12deg)}88%{transform:rotate(-8deg)}94%{transform:rotate(5deg)}}
 .wa:hover{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){.wa,.wa svg,.wa:before,.wa:after{animation:none}}
+
+/* polish */
+.statsec{padding:0;margin-top:-52px;position:relative;z-index:5}
+.stats{box-shadow:0 12px 32px rgba(13,43,78,.14)}
+.svc a{transition:border-color .2s,box-shadow .2s,transform .2s}
+.svc a:hover{box-shadow:0 8px 22px rgba(13,43,78,.1);transform:translateY(-2px)}
+.ic{width:48px;height:48px;border-radius:10px;background:#e8eef6;color:var(--blue);display:grid;place-items:center;flex:none;margin-bottom:14px}
+.btn{transition:background .2s,color .2s,transform .1s}
+.btn:active{transform:scale(.98)}
+.cta .btns2{display:flex;gap:12px;flex-wrap:wrap}
+.cta .btn.o{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.cta .btn.o:hover{background:rgba(255,255,255,.12)}
+.flinks{display:flex;flex-wrap:wrap;gap:6px 22px;margin-bottom:14px}
+.flinks a{color:#d6e0ec;text-decoration:none;font-weight:600}
+.flinks a:hover{text-decoration:underline}
+.dots button{height:22px;background:none;overflow:visible}
+.dots button:before{content:"";position:absolute;left:0;right:0;top:8px;height:6px;border-radius:3px;background:rgba(255,255,255,.3)}
+.dots button.on:after{inset:auto;left:0;right:0;top:8px;height:6px;border-radius:3px}
+.wa{bottom:calc(20px + env(safe-area-inset-bottom))}
+@media(max-width:860px){
+  header.compact .brand span{display:none}
+  header.compact .bar{padding-top:8px}
+  header{transition:box-shadow .2s}
+  header.compact{box-shadow:0 2px 10px rgba(13,43,78,.12)}
+}
+@media(max-width:760px){
+  .svc{gap:12px}
+  .svc a{display:flex;gap:16px;align-items:flex-start}
+  .svc .ic{margin-bottom:0}
+  .svc h3{font-size:1.1rem}
+}
+@media(max-width:600px){
+  .top .wrap{padding-top:0;padding-bottom:0}
+  .top .wrap span{display:none}
+  .top a{display:block;width:100%;padding:9px 0;font-weight:600;font-size:.88rem}
+  .hero .wrap{padding-bottom:64px}
+  .statsec{margin-top:-30px}
+  .stats{box-shadow:0 8px 22px rgba(13,43,78,.14)}
+  h2{font-size:1.55rem}
+  .sub{margin-bottom:24px}
+  .cta .btns2{width:100%;flex-direction:column}
+  .cta .btns2 .btn{text-align:center}
+  .person{gap:18px}
+  .wa{bottom:calc(14px + env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){.dots button.on{background:none}.svc a,.btn{transition:none}}
 </style>
 </head>
 <body>
@@ -238,7 +286,7 @@ footer b{color:#fff}
   </div>
 </section>
 
-<section style="padding:56px 0 0">
+<section class="statsec">
   <div class="wrap"><div class="stats">
     <div><b>30+</b><span>Years in the industry</span></div>
     <div><b>IRDAI</b><span>Licensed insurance agent</span></div>
@@ -252,9 +300,9 @@ footer b{color:#fff}
     <h2>Our services</h2>
     <p class="sub">Clear advice and the right cover for you and your family.</p>
     <div class="svc">
-      <a href="services.html"><h3>Health Insurance</h3><p>Cover for hospital bills and medical care for you and your family.</p></a>
-      <a href="services.html"><h3>Term Life Insurance</h3><p>High life cover at a low premium to protect your family's future.</p></a>
-      <a href="services.html"><h3>LIC</h3><p>Trusted LIC plans for protection, savings and retirement.</p></a>
+      <a href="services.html"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-5.500-8-11a4.500 4.500 0 018-2.800A4.500 4.500 0 0120 10c0 5.500-8 11-8 11z"/></svg></span><div><h3>Health Insurance</h3><p>Cover for hospital bills and medical care for you and your family.</p></div></a>
+      <a href="services.html"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg></span><div><h3>Term Life Insurance</h3><p>High life cover at a low premium to protect your family's future.</p></div></a>
+      <a href="services.html"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-5 9 5M5 10v8M10 10v8M14 10v8M19 10v8M3 20h18"/></svg></span><div><h3>LIC</h3><p>Trusted LIC plans for protection, savings and retirement.</p></div></a>
     </div>
     <p class="also">We also offer Group Health Insurance and Travel Insurance. <a href="services.html">View all services</a></p>
   </div>
@@ -287,11 +335,12 @@ footer b{color:#fff}
 
 <div class="cta"><div class="wrap">
   <div><h2>Have a question about a policy or a new plan?</h2><p>Message us on WhatsApp or call, and we will respond personally.</p></div>
-  <a class="btn wa-link" href="#" target="_blank" rel="noopener" data-msg="Namaste Sanjay ji, I would like to know more about your insurance services.">Chat on WhatsApp</a>
+  <div class="btns2"><a class="btn wa-link" href="#" target="_blank" rel="noopener" data-msg="Namaste Sanjay ji, I would like to know more about your insurance services.">Chat on WhatsApp</a><a class="btn o" href="tel:+919137594297">Call now</a></div>
 </div></div>
 </main>
 
 <footer><div class="wrap">
+  <p class="flinks"><a href="index.html">Home</a><a href="services.html">Services</a><a href="claims-renewals.html">Claim &amp; Renewals</a><a href="contact.html">Contact</a><a href="tel:+919137594297">+91 91375 94297</a></p>
   <p><b>Sanjay Kumar Singh</b> &middot; IRDAI licensed agent of Life Insurance Corporation of India</p>
   <p style="margin-top:6px">Insurance is the subject matter of solicitation. This is the website of an individual agent and is not the official LIC website. For official information visit licindia.in.</p>
 </div></footer>
@@ -315,7 +364,19 @@ document.querySelectorAll(".wa-link").forEach(a=>{a.href="https://wa.me/91913759
   D.forEach((d,k)=>d.addEventListener("click",()=>{go(k);start()}));
   hero.addEventListener("mouseenter",()=>{clearInterval(t);hero.classList.add("paused")});
   hero.addEventListener("mouseleave",()=>{hero.classList.remove("paused");go(i);start()});
+  let x0=null;
+  hero.addEventListener("touchstart",e=>{x0=e.touches[0].clientX},{passive:true});
+  hero.addEventListener("touchend",e=>{
+    if(x0===null)return;
+    const dx=e.changedTouches[0].clientX-x0;x0=null;
+    if(Math.abs(dx)>50){go((i+(dx<0?1:H.length-1))%H.length);start()}
+  },{passive:true});
   start();
+})();
+(function(){
+  const h=document.querySelector("header");
+  const f=()=>h.classList.toggle("compact",window.scrollY>40);
+  window.addEventListener("scroll",f,{passive:true});f();
 })();
 </script>
 </body>
