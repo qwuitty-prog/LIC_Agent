@@ -1,1 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d2b4e">
+<title>Sanjay Kumar Singh | IRDAI Licensed LIC Agent</title>
+<meta name="description" content="Sanjay Kumar Singh, IRDAI licensed LIC agent with 30+ years of experience. Health, term life, LIC, group health and travel insurance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0d2b4e;--blue:#1a4a80;--accent:#b8862b;--gold:#e3b55c;--bg:#fff;--alt:#f4f6f9;--ink:#1c2a3a;--mute:#566475;--line:#dfe5ec}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%}
+body{font-family:"Source Sans 3",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;color:var(--navy);line-height:1.2}
+a{color:inherit;-webkit-tap-highlight-color:transparent}
+h1,h2{text-wrap:balance}
+body{overflow-x:hidden}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1400px;margin:0 auto;padding:0 clamp(18px,4vw,56px)}
+.top{background:var(--navy);color:#cbd6e3;font-size:.88rem}
+.top .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:7px;padding-bottom:7px;flex-wrap:wrap}
+.top a{text-decoration:none}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
+.brand{text-decoration:none;line-height:1.2}
+.brand b{font-family:"Source Serif 4",serif;font-size:1.75rem;color:var(--navy);display:block;letter-spacing:-.01em;line-height:1.1}
+.brand span{font-size:.9rem;color:var(--mute)}
+nav{display:flex;gap:6px}
+nav a{text-decoration:none;font-weight:600;font-size:.95rem;padding:8px 14px;border-radius:6px}
+nav a:hover{background:var(--alt)}
+nav a[aria-current=page]{color:var(--blue);box-shadow:inset 0 -3px 0 var(--accent);border-radius:0}
 
+/* hero slider */
+.hero{position:relative;overflow:hidden;background:var(--navy);min-height:540px;display:flex;align-items:center}
+.hbg{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.hbg.on{opacity:1}
+.hbg:nth-child(1){background:linear-gradient(110deg,#0a2342,#15508f)}
+.hbg:nth-child(2){background:linear-gradient(110deg,#0b3a3f,#14636b)}
+.hbg:nth-child(3){background:linear-gradient(110deg,#102a56,#1f5e9c)}
+.hbg:nth-child(4){background:linear-gradient(110deg,#2a2a5a,#0d2b4e)}
+.hbg svg{position:absolute;right:2%;top:4%;height:92%;width:50%}
+.hbg img.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hbg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,28,52,.88) 0%,rgba(9,28,52,.55) 50%,rgba(9,28,52,.15) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:70px;padding-bottom:70px}
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+.tag{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.92rem;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:99px}
+.tag svg{color:var(--gold)}
+.tag.g{border-color:var(--gold);color:#ffe3a6}
+.heads{display:grid;margin-top:22px;max-width:760px}
+.hs{grid-area:1/1;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .8s ease,transform .8s ease,visibility .8s}
+.hs.on{opacity:1;visibility:visible;transform:none}
+.hero h1{font-size:clamp(2.1rem,4.4vw,3.2rem);color:#fff;margin-bottom:16px;letter-spacing:-.01em}
+.lead{color:#d3deeb;font-size:1.15rem;max-width:620px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:6px;border:1px solid var(--navy)}
+.btn.p{background:var(--navy);color:#fff}.btn.p:hover{background:var(--blue)}
+.hero .btn.p{background:#fff;color:var(--navy);border-color:#fff}.hero .btn.p:hover{background:var(--alt)}
+.hero .btn.s{background:transparent;color:#fff;border-color:rgba(255,255,255,.65)}.hero .btn.s:hover{background:rgba(255,255,255,.14)}
+.dots{display:flex;gap:10px;margin-top:30px}
+.dots button{width:38px;height:6px;border:0;border-radius:3px;background:rgba(255,255,255,.3);cursor:pointer;padding:0;position:relative;overflow:hidden}
+.dots button.on:after{content:"";position:absolute;inset:0;background:var(--gold);transform-origin:left;animation:fill 5s linear forwards}
+.paused .dots button.on:after{animation-play-state:paused}
+@keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(max-width:860px){.hbg svg{width:90%;right:5%;opacity:.35}.hero .wrap{padding-top:48px;padding-bottom:48px}.hero{min-height:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hbg,.hs{transition:none}.dots button.on:after{animation:none}.dots button.on{background:var(--gold)}}
+
+section{padding:72px 0}
+section.alt{background:var(--alt);border-block:1px solid var(--line)}
+h2{font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:12px}
+.sub{color:var(--mute);max-width:720px;margin-bottom:36px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:8px;background:#fff;overflow:hidden}
+.stats div{padding:26px 22px;border-left:1px solid var(--line)}
+.stats div:first-child{border-left:0}
+.stats b{font-family:"Source Serif 4",serif;font-size:1.9rem;color:var(--navy);display:block;line-height:1.1}
+.stats span{color:var(--mute);font-size:.95rem}
+@media(max-width:760px){.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(3){border-left:0}.stats div:nth-child(n+3){border-top:1px solid var(--line)}}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc a{background:#fff;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:8px;padding:24px;text-decoration:none;display:block}
+.svc a:hover{border-color:var(--blue);border-top-color:var(--accent)}
+.svc h3{font-size:1.2rem;margin-bottom:6px}
+.svc p{color:var(--mute);font-size:.97rem}
+.also{margin-top:22px;color:var(--mute)}
+.also a{color:var(--blue);font-weight:600}
+@media(max-width:760px){.svc{grid-template-columns:1fr}}
+
+/* team */
+.team{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:stretch}
+.person{background:#fff;border:1px solid var(--line);border-radius:8px;padding:30px;display:flex;gap:26px;align-items:center}
+.person.main{border-top:4px solid var(--accent)}
+.av{flex:none;border-radius:50%;overflow:hidden;border:4px solid #fff;box-shadow:0 0 0 1px var(--line);background:#dbe4ef center/cover no-repeat}
+.av img{width:100%;height:100%;object-fit:cover;display:block}
+.main .av{width:200px;height:200px}
+.co .av{width:150px;height:150px}
+.av.m{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23dbe4ef'/%3E%3Ccircle cx='50' cy='38' r='17' fill='%238fa3bb'/%3E%3Cpath d='M16 100c0-24 14-38 34-38s34 14 34 38z' fill='%238fa3bb'/%3E%3C/svg%3E")}
+.av.f{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e8dfe6'/%3E%3Cpath d='M30 44c0-18 8-28 20-28s20 10 20 28v14H30z' fill='%239a8499'/%3E%3Ccircle cx='50' cy='40' r='15' fill='%23b9a5b8'/%3E%3Cpath d='M16 100c0-24 14-38 34-38s34 14 34 38z' fill='%239a8499'/%3E%3C/svg%3E")}
+.person h3{font-size:1.4rem}
+.role{color:var(--accent);font-weight:600;margin:2px 0 8px}
+.person p{color:var(--mute);font-size:.97rem}
+@media(max-width:860px){.team{grid-template-columns:1fr}}
+@media(max-width:480px){.person{flex-direction:column;text-align:center}}
+
+.cta{background:var(--navy);color:#fff;padding:56px 0}
+.cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta h2{color:#fff;margin:0 0 6px}.cta p{color:#cbd6e3}
+.cta .btn{background:#fff;color:var(--navy);border-color:#fff}.cta .btn:hover{background:var(--alt)}
+footer{background:#091f3a;color:#9fb0c4;padding:30px 0;font-size:.88rem}
+footer b{color:#fff}
+.wa{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.25);transition:transform .15s}
+.wa:hover{transform:scale(1.06)}
+.wa svg{width:32px;height:32px;fill:#fff}
+
+/* mobile */
+@media(max-width:860px){
+  .bar{flex-direction:column;align-items:flex-start;gap:6px;padding-top:12px;padding-bottom:0;min-height:0}
+  nav{width:100%;display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;gap:0;border-top:1px solid var(--line)}
+  nav a{padding:12px 4px;font-size:.88rem;text-align:center;white-space:nowrap;border-radius:0}
+  nav a[aria-current=page]{box-shadow:inset 0 -3px 0 var(--accent)}
+  section{padding:48px 0}
+  .hero h1{font-size:clamp(1.85rem,7.2vw,2.4rem)}
+  .lead{font-size:1.02rem}
+}
+@media(max-width:600px){
+  body{font-size:16px}
+  .wrap{padding:0 18px}
+  .top .wrap{justify-content:center;text-align:center;font-size:.8rem;gap:2px}
+  .brand b{font-size:1.5rem}
+  .brand span{font-size:.82rem}
+  .hero .wrap{padding-top:36px;padding-bottom:40px}
+  .tag{font-size:.82rem;padding:5px 11px}
+  .heads{margin-top:18px}
+  .btns{flex-direction:column;margin-top:22px}
+  .btns .btn{text-align:center;width:100%}
+  .dots{margin-top:22px}
+  .stats div{padding:18px 14px}
+  .stats b{font-size:1.5rem}
+  .svc a{padding:20px}
+  .person{padding:24px 20px}
+  .main .av{width:150px;height:150px}
+  .co .av{width:120px;height:120px}
+  .cta{padding:42px 0}
+  .cta .wrap{flex-direction:column;align-items:flex-start}
+  .cta .btn{width:100%;text-align:center}
+  .wa{right:14px;bottom:14px;width:54px;height:54px}
+  footer{padding-bottom:84px}
+}
+@media(max-width:360px){nav a{font-size:.8rem}.brand b{font-size:1.35rem}}
+
+/* whatsapp animation */
+.wa{animation:wabob 3.2s ease-in-out infinite}
+.wa:before,.wa:after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;opacity:0;animation:waring 2.6s ease-out infinite}
+.wa:after{animation-delay:1.3s}
+.wa svg{animation:wawig 3.2s ease-in-out infinite;transform-origin:50% 60%}
+@keyframes waring{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.9);opacity:0}}
+@keyframes wabob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes wawig{0%,70%,100%{transform:rotate(0)}76%{transform:rotate(-14deg)}82%{transform:rotate(12deg)}88%{transform:rotate(-8deg)}94%{transform:rotate(5deg)}}
+.wa:hover{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.wa,.wa svg,.wa:before,.wa:after{animation:none}}
+
+/* polish */
+.statsec{padding:0;margin-top:-52px;position:relative;z-index:5}
+.stats{box-shadow:0 12px 32px rgba(13,43,78,.14)}
+.svc a{transition:border-color .2s,box-shadow .2s,transform .2s}
+.svc a:hover{box-shadow:0 8px 22px rgba(13,43,78,.1);transform:translateY(-2px)}
+.ic{width:48px;height:48px;border-radius:10px;background:#e8eef6;color:var(--blue);display:grid;place-items:center;flex:none;margin-bottom:14px}
+.btn{transition:background .2s,color .2s,transform .1s}
+.btn:active{transform:scale(.98)}
+.cta .btns2{display:flex;gap:12px;flex-wrap:wrap}
+.cta .btn.o{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.cta .btn.o:hover{background:rgba(255,255,255,.12)}
+.flinks{display:flex;flex-wrap:wrap;gap:6px 22px;margin-bottom:14px}
+.flinks a{color:#d6e0ec;text-decoration:none;font-weight:600}
+.flinks a:hover{text-decoration:underline}
+.dots button{height:22px;background:none;overflow:visible}
+.dots button:before{content:"";position:absolute;left:0;right:0;top:8px;height:6px;border-radius:3px;background:rgba(255,255,255,.3)}
+.dots button.on:after{inset:auto;left:0;right:0;top:8px;height:6px;border-radius:3px}
+.wa{bottom:calc(20px + env(safe-area-inset-bottom))}
+@media(max-width:860px){
+  header.compact .brand span{display:none}
+  header.compact .bar{padding-top:8px}
+  header{transition:box-shadow .2s}
+  header.compact{box-shadow:0 2px 10px rgba(13,43,78,.12)}
+}
+@media(max-width:760px){
+  .svc{gap:12px}
+  .svc a{display:flex;gap:16px;align-items:flex-start}
+  .svc .ic{margin-bottom:0}
+  .svc h3{font-size:1.1rem}
+}
+@media(max-width:600px){
+  .top .wrap{padding-top:0;padding-bottom:0}
+  .top .wrap span{display:none}
+  .top a{display:block;width:100%;padding:9px 0;font-weight:600;font-size:.88rem}
+  .hero .wrap{padding-bottom:64px}
+  .statsec{margin-top:-30px}
+  .stats{box-shadow:0 8px 22px rgba(13,43,78,.14)}
+  h2{font-size:1.55rem}
+  .sub{margin-bottom:24px}
+  .cta .btns2{width:100%;flex-direction:column}
+  .cta .btns2 .btn{text-align:center}
+  .person{gap:18px}
+  .wa{bottom:calc(14px + env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){.dots button.on{background:none}.svc a,.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<!-- shared figure for hero illustrations -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="pp" viewBox="0 0 40 80"><circle cx="20" cy="12" r="10"/><path d="M6 80V38a14 14 0 0 1 28 0v42z"/></symbol></svg>
+
+<div class="top"><div class="wrap">
+  <span>Authorised agent of Life Insurance Corporation of India</span>
+  <a href="tel:+919137594297">Call: +91 91375 94297</a>
+</div></div>
+
+<header><div class="wrap bar">
+  <a class="brand" href="index.html"><b>Sanjay Kumar Singh</b><span>LIC Agent &middot; Insurance Advisor</span></a>
+  <nav aria-label="Main">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="services.html">Services</a>
+    <a href="claims-renewals.html">Claim &amp; Renewals</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</div></header>
+
+<main>
+<section class="hero" id="hero" style="padding:0" aria-roledescription="carousel" aria-label="Highlights">
+  <!-- To use real photos: add images/hero-1.jpg ... hero-4.jpg. If a photo is missing, the illustration shows instead. -->
+  <div class="hbg on">
+    <svg viewBox="0 0 800 600" preserveAspectRatio="xMaxYMid meet" aria-hidden="true">
+      <path d="M130 310A270 230 0 0 1 670 310z" fill="rgba(227,181,92,.2)" stroke="#e3b55c" stroke-width="5"/>
+      <path d="M400 310v190q0 34 32 34" fill="none" stroke="#e3b55c" stroke-width="6" stroke-linecap="round"/>
+      <g fill="rgba(255,255,255,.9)"><use href="#pp" x="250" y="400" width="52" height="104"/><use href="#pp" x="320" y="420" width="42" height="84"/><use href="#pp" x="440" y="430" width="38" height="76"/><use href="#pp" x="500" y="400" width="52" height="104"/></g>
+      <path d="M180 520H620" stroke="rgba(255,255,255,.35)" stroke-width="3"/>
+    </svg>
+    <img class="ph" src="images/hero-1.jpg" alt="" onerror="this.remove()">
+  </div>
+  <div class="hbg">
+    <svg viewBox="0 0 800 600" preserveAspectRatio="xMaxYMid meet" aria-hidden="true">
+      <circle cx="400" cy="270" r="190" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.35)" stroke-width="3"/>
+      <path d="M365 170h70v70h70v70h-70v70h-70v-70h-70v-70h70z" fill="#e3b55c"/>
+      <polyline points="70,500 240,500 285,440 335,550 390,410 440,500 730,500" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" opacity=".85"/>
+    </svg>
+    <img class="ph" src="images/hero-2.jpg" alt="" onerror="this.remove()">
+  </div>
+  <div class="hbg">
+    <svg viewBox="0 0 800 600" preserveAspectRatio="xMaxYMid meet" aria-hidden="true">
+      <circle cx="400" cy="330" r="190" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.35)" stroke-width="3"/>
+      <ellipse cx="400" cy="330" rx="80" ry="190" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="3"/>
+      <path d="M210 330H590M235 240H565M235 420H565" stroke="rgba(255,255,255,.25)" stroke-width="3"/>
+      <path d="M90 500Q390 60 700 190" fill="none" stroke="#e3b55c" stroke-width="5" stroke-dasharray="4 16" stroke-linecap="round"/>
+      <polygon points="690,160 775,205 722,215 712,252 695,226 655,222" fill="#e3b55c"/>
+    </svg>
+    <img class="ph" src="images/hero-3.jpg" alt="" onerror="this.remove()">
+  </div>
+  <div class="hbg">
+    <svg viewBox="0 0 800 600" preserveAspectRatio="xMaxYMid meet" aria-hidden="true">
+      <path d="M400 70L630 155V320C630 450 530 525 400 570 270 525 170 450 170 320V155z" fill="rgba(227,181,92,.15)" stroke="#e3b55c" stroke-width="5"/>
+      <g fill="rgba(255,255,255,.9)"><use href="#pp" x="225" y="290" width="46" height="92"/><use href="#pp" x="292" y="270" width="52" height="104"/><use href="#pp" x="374" y="258" width="52" height="104"/><use href="#pp" x="456" y="270" width="52" height="104"/><use href="#pp" x="529" y="290" width="46" height="92"/></g>
+      <path d="M385 180h30v30h30v30h-30v30h-30v-30h-30v-30h30z" fill="#e3b55c"/>
+    </svg>
+    <img class="ph" src="images/hero-4.jpg" alt="" onerror="this.remove()">
+  </div>
+
+  <div class="wrap">
+    <div class="chips">
+      <span class="tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.500 9-8 11-4.500-2-8-6-8-11V5z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg>IRDAI Licensed Agent</span>
+      <span class="tag g">30+ Years Experience</span>
+    </div>
+    <div class="heads" aria-live="polite">
+      <div class="hs on"><h1>Dependable life insurance guidance for over 30 years</h1><p class="lead">LIC and term life plans chosen around your income and goals, with support at every renewal and claim.</p></div>
+      <div class="hs"><h1>Good health cover, before you need it</h1><p class="lead">Health insurance for you and your family, explained clearly so you know exactly what is covered.</p></div>
+      <div class="hs"><h1>Travel with confidence, wherever you go</h1><p class="lead">Travel insurance for medical emergencies, trip delays and the unexpected, at home or abroad.</p></div>
+      <div class="hs"><h1>Keep your whole team protected</h1><p class="lead">Group health insurance that looks after your employees and shows you value them.</p></div>
+    </div>
+    <div class="btns">
+      <a class="btn p" href="services.html">Explore services</a>
+      <a class="btn s" href="contact.html">Contact me</a>
+    </div>
+    <div class="dots" role="group" aria-label="Choose slide">
+      <button class="on" aria-label="Slide 1"></button><button aria-label="Slide 2"></button><button aria-label="Slide 3"></button><button aria-label="Slide 4"></button>
+    </div>
+  </div>
+</section>
+
+<section class="statsec">
+  <div class="wrap"><div class="stats">
+    <div><b>30+</b><span>Years in the industry</span></div>
+    <div><b>IRDAI</b><span>Licensed insurance agent</span></div>
+    <div><b>LIC</b><span>Authorised agent</span></div>
+    <div><b>1-to-1</b><span>Personal advice</span></div>
+  </div></div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Our services</h2>
+    <p class="sub">Clear advice and the right cover for you and your family.</p>
+    <div class="svc">
+      <a href="services.html"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-5.500-8-11a4.500 4.500 0 018-2.800A4.500 4.500 0 0120 10c0 5.500-8 11-8 11z"/></svg></span><div><h3>Health Insurance</h3><p>Cover for hospital bills and medical care for you and your family.</p></div></a>
+      <a href="services.html"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg></span><div><h3>Term Life Insurance</h3><p>High life cover at a low premium to protect your family's future.</p></div></a>
+      <a href="services.html"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-5 9 5M5 10v8M10 10v8M14 10v8M19 10v8M3 20h18"/></svg></span><div><h3>LIC</h3><p>Trusted LIC plans for protection, savings and retirement.</p></div></a>
+    </div>
+    <p class="also">We also offer Group Health Insurance and Travel Insurance. <a href="services.html">View all services</a></p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>The people behind the team</h2>
+    <p class="sub">You deal with real people, who know your name and your policy.</p>
+    <div class="team">
+      <article class="person main">
+        <div class="av m"><img src="https://github.com/qwuitty-prog/LIC_Agent/blob/main/LICagent.jpeg?raw=true" alt="Sanjay Kumar Singh" onerror="this.remove()"></div>
+        <div>
+          <h3>Sanjay Kumar Singh</h3>
+          <div class="role">LIC Agent &middot; IRDAI Licensed</div>
+          <p>With over 30 years in life insurance, Sanjay ji advises families on the right cover and personally looks after their policies from the first premium to the final claim.</p>
+        </div>
+      </article>
+      <article class="person co">
+        <div class="av f"><img src="https://github.com/qwuitty-prog/LIC_Agent/blob/main/lic2.jpeg?raw=true" alt="Shikha Sanjay Singh" onerror="this.remove()"></div>
+        <div>
+          <h3>Shikha Sanjay Singh</h3>
+          <div class="role">Co-Manager</div>
+          <p>Manages client support, documentation and follow-ups so every request is handled on time.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="cta"><div class="wrap">
+  <div><h2>Have a question about a policy or a new plan?</h2><p>Message us on WhatsApp or call, and we will respond personally.</p></div>
+  <div class="btns2"><a class="btn wa-link" href="#" target="_blank" rel="noopener" data-msg="Namaste Sanjay ji, I would like to know more about your insurance services.">Chat on WhatsApp</a><a class="btn o" href="tel:+919137594297">Call now</a></div>
+</div></div>
+</main>
+
+<footer><div class="wrap">
+  <p class="flinks"><a href="index.html">Home</a><a href="services.html">Services</a><a href="claims-renewals.html">Claim &amp; Renewals</a><a href="contact.html">Contact</a><a href="tel:+919137594297">+91 91375 94297</a></p>
+  <p><b>Sanjay Kumar Singh</b> &middot; IRDAI licensed agent of Life Insurance Corporation of India</p>
+  <p style="margin-top:6px">Insurance is the subject matter of solicitation. This is the website of an individual agent and is not the official LIC website. For official information visit licindia.in.</p>
+</div></footer>
+
+<a class="wa wa-link" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" data-msg="Namaste Sanjay ji, I found your website and would like to know more about your insurance services.">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.040 2a9.900 9.900 0 00-8.500 14.900L2 22l5.250-1.380A9.900 9.900 0 1012.040 2zm0 1.800a8.100 8.100 0 11-4.200 15.040l-.3-.18-3.100.82.83-3.020-.2-.31A8.100 8.100 0 0112.040 3.800zM8.700 7.600c-.2 0-.5.070-.75.350-.26.280-.98.960-.98 2.340s1 2.700 1.140 2.890c.14.190 1.950 3.110 4.800 4.240 2.370.94 2.850.75 3.360.7.510-.05 1.650-.67 1.880-1.320.23-.65.23-1.210.16-1.320-.07-.12-.26-.19-.54-.33-.28-.14-1.650-.82-1.910-.91-.26-.1-.44-.14-.63.14-.19.28-.72.91-.88 1.100-.16.190-.33.210-.61.070-.28-.14-1.180-.43-2.250-1.390-.83-.74-1.390-1.650-1.550-1.930-.16-.28-.02-.43.12-.57.13-.12.28-.33.42-.5.14-.16.19-.28.28-.47.1-.19.050-.35-.02-.5-.07-.14-.63-1.520-.87-2.080-.23-.55-.46-.47-.63-.48z"/></svg>
+</a>
+
+<script>
+document.querySelectorAll(".wa-link").forEach(a=>{a.href="https://wa.me/919137594297?text="+encodeURIComponent(a.dataset.msg)});
+(function(){
+  const hero=document.getElementById("hero"),L=[...hero.querySelectorAll(".hbg")],H=[...hero.querySelectorAll(".hs")],D=[...hero.querySelectorAll(".dots button")];
+  let i=0,t;
+  function go(n){
+    i=n;
+    [L,H,D].forEach(a=>a.forEach((e,k)=>e.classList.remove("on")));
+    void hero.offsetWidth;
+    [L,H,D].forEach(a=>a[i].classList.add("on"));
+  }
+  const start=()=>{clearInterval(t);t=setInterval(()=>go((i+1)%H.length),5000)};
+  D.forEach((d,k)=>d.addEventListener("click",()=>{go(k);start()}));
+  hero.addEventListener("mouseenter",()=>{clearInterval(t);hero.classList.add("paused")});
+  hero.addEventListener("mouseleave",()=>{hero.classList.remove("paused");go(i);start()});
+  let x0=null;
+  hero.addEventListener("touchstart",e=>{x0=e.touches[0].clientX},{passive:true});
+  hero.addEventListener("touchend",e=>{
+    if(x0===null)return;
+    const dx=e.changedTouches[0].clientX-x0;x0=null;
+    if(Math.abs(dx)>50){go((i+(dx<0?1:H.length-1))%H.length);start()}
+  },{passive:true});
+  start();
+})();
+(function(){
+  const h=document.querySelector("header");
+  const f=()=>h.classList.toggle("compact",window.scrollY>40);
+  window.addEventListener("scroll",f,{passive:true});f();
+})();
+</script>
+</body>
+</html>
