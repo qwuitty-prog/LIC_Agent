@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0d2b4e">
-<title>Sanjay Kumar Singh | IRDAI Licensed LIC Agent</title>
-<meta name="description" content="Sanjay Kumar Singh, IRDAI licensed LIC agent with 30+ years of experience. Health, term life, LIC, group health and travel insurance.">
+<title>Insurance Services | Sanjay Kumar Singh, LIC Agent</title>
+<meta name="description" content="Health, term life, LIC, group health and travel insurance from Sanjay Kumar Singh, IRDAI licensed LIC agent with 30+ years of experience.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
@@ -204,6 +204,57 @@ footer b{color:#fff}
   .wa{bottom:calc(14px + env(safe-area-inset-bottom))}
 }
 @media(prefers-reduced-motion:reduce){.dots button.on{background:none}.svc a,.btn{transition:none}}
+
+/* services page */
+.phead{background:linear-gradient(110deg,#0a2342,#15508f);color:#fff;padding:52px 0 0}
+.crumb{font-size:.9rem;color:#b9c9dc;margin-bottom:12px}
+.crumb a{text-decoration:none}.crumb a:hover{text-decoration:underline}
+.phead h1{color:#fff;font-size:clamp(2rem,4.4vw,3rem);margin-bottom:12px}
+.phead p{color:#d3deeb;font-size:1.12rem;max-width:680px}
+.jump{display:flex;gap:10px;overflow-x:auto;padding:30px 0 22px;scrollbar-width:none}
+.jump::-webkit-scrollbar{display:none}
+.jump a{flex:none;text-decoration:none;color:#fff;font-weight:600;font-size:.95rem;border:1px solid rgba(255,255,255,.4);padding:9px 18px;border-radius:99px;transition:background .2s}
+.jump a:hover{background:rgba(255,255,255,.15)}
+.sv{padding:64px 0;border-bottom:1px solid var(--line)}
+.sv:nth-of-type(even){background:var(--alt)}
+.sv-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,72px);align-items:start}
+.sv .ic{width:56px;height:56px;margin-bottom:18px}
+.sv h2{margin-bottom:10px}
+.sv .lede{color:var(--mute);margin-bottom:22px}
+.acts{display:flex;gap:12px;flex-wrap:wrap}
+.btn.o2{background:#fff;color:var(--navy)}.btn.o2:hover{background:var(--alt)}
+.box{background:#fff;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:8px;padding:26px}
+.box h3{font-size:1.1rem;margin-bottom:14px}
+.feat{list-style:none;padding:0;display:grid;gap:12px}
+.feat li{position:relative;padding-left:30px}
+.feat li:before{content:"";position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;background:#e8eef6 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a4a80' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.500l4 4 8-9'/%3E%3C/svg%3E") center/12px no-repeat}
+.ideal{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--mute);font-size:.97rem}
+.ideal b{color:var(--navy)}
+.how{padding:72px 0;background:#fff}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;list-style:none;padding:0;counter-reset:st}
+.steps li{counter-increment:st;border:1px solid var(--line);border-radius:8px;padding:24px;background:var(--alt)}
+.steps li:before{content:counter(st);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font:700 1rem "Source Serif 4",serif;margin-bottom:12px}
+.steps h3{font-size:1.15rem;margin-bottom:6px}
+.steps p{color:var(--mute);font-size:.97rem}
+.faq{padding:72px 0;background:var(--alt);border-top:1px solid var(--line)}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:12px;max-width:860px}
+.faq summary{cursor:pointer;font-weight:600;padding:16px 20px;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center;color:var(--navy)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";font-size:1.4rem;color:var(--accent);line-height:1}
+.faq details[open] summary:after{content:"\2212"}
+.faq details p{padding:0 20px 18px;color:var(--mute)}
+@media(max-width:860px){
+  .phead{padding-top:36px}
+  .sv{padding:44px 0}
+  .sv-grid{grid-template-columns:1fr;gap:22px}
+  .steps{grid-template-columns:1fr;gap:14px}
+  .how,.faq{padding:48px 0}
+}
+@media(max-width:600px){
+  .acts{flex-direction:column}.acts .btn{text-align:center;width:100%}
+  .box{padding:22px 18px}
+  .sv .ic{width:50px;height:50px}
+}
 </style>
 </head>
 <body>
@@ -219,122 +270,74 @@ footer b{color:#fff}
 <header><div class="wrap bar">
   <a class="brand" href="index.html"><b>Sanjay Kumar Singh</b><span>LIC Agent &middot; Insurance Advisor</span></a>
   <nav aria-label="Main">
-    <a href="index.html" aria-current="page">Home</a>
-    <a href="services.html">Services</a>
+    <a href="index.html">Home</a>
+    <a href="services.html" aria-current="page">Services</a>
     <a href="claims-renewals.html">Claim &amp; Renewals</a>
     <a href="contact.html">Contact</a>
   </nav>
 </div></header>
 
 <main>
-<section class="hero" id="hero" style="padding:0" aria-roledescription="carousel" aria-label="Highlights">
-  <!-- To use real photos: add images/hero-1.jpg ... hero-4.jpg. If a photo is missing, the illustration shows instead. -->
-  <div class="hbg on">
-    <svg viewBox="0 0 800 600" preserveAspectRatio="xMaxYMid meet" aria-hidden="true">
-      <path d="M130 310A270 230 0 0 1 670 310z" fill="rgba(227,181,92,.2)" stroke="#e3b55c" stroke-width="5"/>
-      <path d="M400 310v190q0 34 32 34" fill="none" stroke="#e3b55c" stroke-width="6" stroke-linecap="round"/>
-      <g fill="rgba(255,255,255,.9)"><use href="#pp" x="250" y="400" width="52" height="104"/><use href="#pp" x="320" y="420" width="42" height="84"/><use href="#pp" x="440" y="430" width="38" height="76"/><use href="#pp" x="500" y="400" width="52" height="104"/></g>
-      <path d="M180 520H620" stroke="rgba(255,255,255,.35)" stroke-width="3"/>
-    </svg>
-    <img class="ph" src="images/hero-1.jpg" alt="" onerror="this.remove()">
-  </div>
-  <div class="hbg">
-    <svg viewBox="0 0 800 600" preserveAspectRatio="xMaxYMid meet" aria-hidden="true">
-      <circle cx="400" cy="270" r="190" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.35)" stroke-width="3"/>
-      <path d="M365 170h70v70h70v70h-70v70h-70v-70h-70v-70h70z" fill="#e3b55c"/>
-      <polyline points="70,500 240,500 285,440 335,550 390,410 440,500 730,500" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" opacity=".85"/>
-    </svg>
-    <img class="ph" src="images/hero-2.jpg" alt="" onerror="this.remove()">
-  </div>
-  <div class="hbg">
-    <svg viewBox="0 0 800 600" preserveAspectRatio="xMaxYMid meet" aria-hidden="true">
-      <circle cx="400" cy="330" r="190" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.35)" stroke-width="3"/>
-      <ellipse cx="400" cy="330" rx="80" ry="190" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="3"/>
-      <path d="M210 330H590M235 240H565M235 420H565" stroke="rgba(255,255,255,.25)" stroke-width="3"/>
-      <path d="M90 500Q390 60 700 190" fill="none" stroke="#e3b55c" stroke-width="5" stroke-dasharray="4 16" stroke-linecap="round"/>
-      <polygon points="690,160 775,205 722,215 712,252 695,226 655,222" fill="#e3b55c"/>
-    </svg>
-    <img class="ph" src="images/hero-3.jpg" alt="" onerror="this.remove()">
-  </div>
-  <div class="hbg">
-    <svg viewBox="0 0 800 600" preserveAspectRatio="xMaxYMid meet" aria-hidden="true">
-      <path d="M400 70L630 155V320C630 450 530 525 400 570 270 525 170 450 170 320V155z" fill="rgba(227,181,92,.15)" stroke="#e3b55c" stroke-width="5"/>
-      <g fill="rgba(255,255,255,.9)"><use href="#pp" x="225" y="290" width="46" height="92"/><use href="#pp" x="292" y="270" width="52" height="104"/><use href="#pp" x="374" y="258" width="52" height="104"/><use href="#pp" x="456" y="270" width="52" height="104"/><use href="#pp" x="529" y="290" width="46" height="92"/></g>
-      <path d="M385 180h30v30h30v30h-30v30h-30v-30h-30v-30h30z" fill="#e3b55c"/>
-    </svg>
-    <img class="ph" src="images/hero-4.jpg" alt="" onerror="this.remove()">
-  </div>
+<div class="phead"><div class="wrap">
+  <div class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Services</div>
+  <h1>Our insurance services</h1>
+  <p>Five ways to protect your family, your health, your team and your travels, with personal guidance from an IRDAI licensed agent.</p>
+  <nav class="jump" aria-label="Jump to a service">
+    <a href="#health">Health Insurance</a><a href="#term">Term Life Insurance</a><a href="#lic">LIC</a><a href="#group">Group Health Insurance</a><a href="#travel">Travel Insurance</a>
+  </nav>
+</div></div>
+<section class="sv" id="health"><div class="wrap sv-grid">
+  <div><span class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-5.500-8-11a4.500 4.500 0 018-2.800A4.500 4.500 0 0120 10c0 5.500-8 11-8 11z"/></svg></span>
+    <h2>Health Insurance</h2><p class="lede">Financial protection against hospital bills and medical expenses, so a health problem does not become a money problem for your family.</p>
+    <div class="acts"><a class="btn p wa-link" href="#" target="_blank" rel="noopener" data-msg="Namaste Sanjay ji, I would like to know about Health Insurance.">Enquire on WhatsApp</a><a class="btn o2" href="tel:+919137594297">Call now</a></div></div>
+  <div class="box"><h3>Key benefits</h3><ul class="feat"><li>Cover for hospital stays, surgeries and treatment costs</li><li>Cashless treatment at network hospitals</li><li>Options for individuals, couples and the whole family</li><li>Tax benefits may be available as per prevailing law</li></ul><p class="ideal"><b>Ideal for:</b> Individuals and families who want a safety net for medical costs.</p></div>
+</div></section>
+<section class="sv" id="term"><div class="wrap sv-grid">
+  <div><span class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg></span>
+    <h2>Term Life Insurance</h2><p class="lede">Pure life cover at a low premium. If you are not there, your family gets a lump sum to manage loans, expenses and future goals.</p>
+    <div class="acts"><a class="btn p wa-link" href="#" target="_blank" rel="noopener" data-msg="Namaste Sanjay ji, I would like to know about Term Life Insurance.">Enquire on WhatsApp</a><a class="btn o2" href="tel:+919137594297">Call now</a></div></div>
+  <div class="box"><h3>Key benefits</h3><ul class="feat"><li>High cover amount at an affordable premium</li><li>Protects loans, household expenses and your children&rsquo;s education</li><li>Choose a cover period that lasts until retirement</li><li>Optional add-on covers for added protection</li></ul><p class="ideal"><b>Ideal for:</b> Earning members with dependants, home loans or long-term goals.</p></div>
+</div></section>
+<section class="sv" id="lic"><div class="wrap sv-grid">
+  <div><span class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-5 9 5M5 10v8M10 10v8M14 10v8M19 10v8M3 20h18"/></svg></span>
+    <h2>LIC</h2><p class="lede">Plans from Life Insurance Corporation of India that combine protection with disciplined saving, for every stage of life.</p>
+    <div class="acts"><a class="btn p wa-link" href="#" target="_blank" rel="noopener" data-msg="Namaste Sanjay ji, I would like to know about LIC plans.">Enquire on WhatsApp</a><a class="btn o2" href="tel:+919137594297">Call now</a></div></div>
+  <div class="box"><h3>Plan types</h3><ul class="feat"><li>Savings and endowment plans with maturity benefits</li><li>Child plans for education and future needs</li><li>Pension plans for a steady income after retirement</li><li>Personal help with premiums, nominee changes and policy servicing</li></ul><p class="ideal"><b>Ideal for:</b> Families who want long-term saving along with life cover.</p></div>
+</div></section>
+<section class="sv" id="group"><div class="wrap sv-grid">
+  <div><span class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.500"/><path d="M3 20c0-3.500 2.500-6 6-6s6 2.500 6 6M15 14.500c3 0 6 1.500 6 5.500"/></svg></span>
+    <h2>Group Health Insurance</h2><p class="lede">A single health policy for your organisation, covering your employees and, where chosen, their families.</p>
+    <div class="acts"><a class="btn p wa-link" href="#" target="_blank" rel="noopener" data-msg="Namaste Sanjay ji, I would like to know about Group Health Insurance for my team.">Enquire on WhatsApp</a><a class="btn o2" href="tel:+919137594297">Call now</a></div></div>
+  <div class="box"><h3>Key benefits</h3><ul class="feat"><li>Cover for all employees under one policy</li><li>Option to include spouse, children and parents</li><li>Support in choosing the right cover and sum insured</li><li>Help with onboarding, claims and renewals</li></ul><p class="ideal"><b>Ideal for:</b> Business owners, clinics, schools and companies with a team.</p></div>
+</div></section>
+<section class="sv" id="travel"><div class="wrap sv-grid">
+  <div><span class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span>
+    <h2>Travel Insurance</h2><p class="lede">Cover for the unexpected on trips within India or abroad, from medical emergencies to lost baggage.</p>
+    <div class="acts"><a class="btn p wa-link" href="#" target="_blank" rel="noopener" data-msg="Namaste Sanjay ji, I would like to know about Travel Insurance.">Enquire on WhatsApp</a><a class="btn o2" href="tel:+919137594297">Call now</a></div></div>
+  <div class="box"><h3>Key benefits</h3><ul class="feat"><li>Medical emergencies and hospital expenses while travelling</li><li>Trip cancellation or delay, and lost or delayed baggage</li><li>Loss of passport and other travel documents</li><li>Often required for visa applications such as Schengen</li></ul><p class="ideal"><b>Ideal for:</b> Holiday travellers, students, business travellers and senior citizens.</p></div>
+</div></section>
 
-  <div class="wrap">
-    <div class="chips">
-      <span class="tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.500 9-8 11-4.500-2-8-6-8-11V5z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg>IRDAI Licensed Agent</span>
-      <span class="tag g">30+ Years Experience</span>
-    </div>
-    <div class="heads" aria-live="polite">
-      <div class="hs on"><h1>Dependable life insurance guidance for over 30 years</h1><p class="lead">LIC and term life plans chosen around your income and goals, with support at every renewal and claim.</p></div>
-      <div class="hs"><h1>Good health cover, before you need it</h1><p class="lead">Health insurance for you and your family, explained clearly so you know exactly what is covered.</p></div>
-      <div class="hs"><h1>Travel with confidence, wherever you go</h1><p class="lead">Travel insurance for medical emergencies, trip delays and the unexpected, at home or abroad.</p></div>
-      <div class="hs"><h1>Keep your whole team protected</h1><p class="lead">Group health insurance that looks after your employees and shows you value them.</p></div>
-    </div>
-    <div class="btns">
-      <a class="btn p" href="services.html">Explore services</a>
-      <a class="btn s" href="contact.html">Contact me</a>
-    </div>
-    <div class="dots" role="group" aria-label="Choose slide">
-      <button class="on" aria-label="Slide 1"></button><button aria-label="Slide 2"></button><button aria-label="Slide 3"></button><button aria-label="Slide 4"></button>
-    </div>
-  </div>
-</section>
+<section class="how"><div class="wrap">
+  <h2>How we work with you</h2>
+  <p class="sub">A simple process, with the same person guiding you from start to finish.</p>
+  <ol class="steps">
+    <li><h3>Tell us what you need</h3><p>Call or message us about your family, your budget and what you want to protect.</p></li>
+    <li><h3>Get clear advice</h3><p>We explain suitable options, premiums and what is and is not covered, in plain language.</p></li>
+    <li><h3>Stay supported</h3><p>We help with paperwork, renewals and claims for as long as your policy runs.</p></li>
+  </ol>
+</div></section>
 
-<section class="statsec">
-  <div class="wrap"><div class="stats">
-    <div><b>30+</b><span>Years in the industry</span></div>
-    <div><b>IRDAI</b><span>Licensed insurance agent</span></div>
-    <div><b>LIC</b><span>Authorised agent</span></div>
-    <div><b>1-to-1</b><span>Personal advice</span></div>
-  </div></div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>Our services</h2>
-    <p class="sub">Clear advice and the right cover for you and your family.</p>
-    <div class="svc">
-      <a href="services.html"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-5.500-8-11a4.500 4.500 0 018-2.800A4.500 4.500 0 0120 10c0 5.500-8 11-8 11z"/></svg></span><div><h3>Health Insurance</h3><p>Cover for hospital bills and medical care for you and your family.</p></div></a>
-      <a href="services.html"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg></span><div><h3>Term Life Insurance</h3><p>High life cover at a low premium to protect your family's future.</p></div></a>
-      <a href="services.html"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-5 9 5M5 10v8M10 10v8M14 10v8M19 10v8M3 20h18"/></svg></span><div><h3>LIC</h3><p>Trusted LIC plans for protection, savings and retirement.</p></div></a>
-    </div>
-    <p class="also">We also offer Group Health Insurance and Travel Insurance. <a href="services.html">View all services</a></p>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <h2>The people behind the team</h2>
-    <p class="sub">You deal with real people, who know your name and your policy.</p>
-    <div class="team">
-      <article class="person main">
-        <div class="av m"><img src="https://github.com/qwuitty-prog/LIC_Agent/blob/main/LICagent.jpeg?raw=true" alt="Sanjay Kumar Singh" onerror="this.remove()"></div>
-        <div>
-          <h3>Sanjay Kumar Singh</h3>
-          <div class="role">LIC Agent &middot; IRDAI Licensed</div>
-          <p>With over 30 years in life insurance, Sanjay ji advises families on the right cover and personally looks after their policies from the first premium to the final claim.</p>
-        </div>
-      </article>
-      <article class="person co">
-        <div class="av f"><img src="https://github.com/qwuitty-prog/LIC_Agent/blob/main/lic2.jpeg?raw=true" alt="Shikha Sanjay Singh" onerror="this.remove()"></div>
-        <div>
-          <h3>Shikha Sanjay Singh</h3>
-          <div class="role">Co-Manager</div>
-          <p>Manages client support, documentation and follow-ups so every request is handled on time.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+<section class="faq"><div class="wrap">
+  <h2>Common questions</h2>
+  <p class="sub">Quick answers before you get in touch.</p>
+  <details><summary>How do I choose the right plan?</summary><p>Start with who depends on you and what you want to protect. We will compare options with you and recommend only what suits your needs and budget.</p></details>
+  <details><summary>Can I get help if I already have a policy?</summary><p>Yes. We can review your current cover, check nominee details and help with renewals or a claim.</p></details>
+  <details><summary>Are the benefits the same for every plan?</summary><p>No. Benefits, premiums and conditions depend on the plan and insurer. Please read the policy document, and we will walk you through it before you decide.</p></details>
+</div></section>
+</main>
 
 <div class="cta"><div class="wrap">
-  <div><h2>Have a question about a policy or a new plan?</h2><p>Message us on WhatsApp or call, and we will respond personally.</p></div>
+  <div><h2>Not sure which cover is right for you?</h2><p>Message us on WhatsApp or call, and we will respond personally.</p></div>
   <div class="btns2"><a class="btn wa-link" href="#" target="_blank" rel="noopener" data-msg="Namaste Sanjay ji, I would like to know more about your insurance services.">Chat on WhatsApp</a><a class="btn o" href="tel:+919137594297">Call now</a></div>
 </div></div>
 </main>
@@ -351,28 +354,6 @@ footer b{color:#fff}
 
 <script>
 document.querySelectorAll(".wa-link").forEach(a=>{a.href="https://wa.me/919137594297?text="+encodeURIComponent(a.dataset.msg)});
-(function(){
-  const hero=document.getElementById("hero"),L=[...hero.querySelectorAll(".hbg")],H=[...hero.querySelectorAll(".hs")],D=[...hero.querySelectorAll(".dots button")];
-  let i=0,t;
-  function go(n){
-    i=n;
-    [L,H,D].forEach(a=>a.forEach((e,k)=>e.classList.remove("on")));
-    void hero.offsetWidth;
-    [L,H,D].forEach(a=>a[i].classList.add("on"));
-  }
-  const start=()=>{clearInterval(t);t=setInterval(()=>go((i+1)%H.length),5000)};
-  D.forEach((d,k)=>d.addEventListener("click",()=>{go(k);start()}));
-  hero.addEventListener("mouseenter",()=>{clearInterval(t);hero.classList.add("paused")});
-  hero.addEventListener("mouseleave",()=>{hero.classList.remove("paused");go(i);start()});
-  let x0=null;
-  hero.addEventListener("touchstart",e=>{x0=e.touches[0].clientX},{passive:true});
-  hero.addEventListener("touchend",e=>{
-    if(x0===null)return;
-    const dx=e.changedTouches[0].clientX-x0;x0=null;
-    if(Math.abs(dx)>50){go((i+(dx<0?1:H.length-1))%H.length);start()}
-  },{passive:true});
-  start();
-})();
 (function(){
   const h=document.querySelector("header");
   const f=()=>h.classList.toggle("compact",window.scrollY>40);
